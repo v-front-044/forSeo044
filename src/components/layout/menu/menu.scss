@@ -1,0 +1,200 @@
+.menu {
+	height: 100%;
+	font-size: 13px;
+
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		// @media (max-width: toEm($mobile)) {
+		// 	position: fixed;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	left: -100%;
+		// 	top: 0;
+		// 	overflow: auto;
+		// 	padding: 50px 15px 30px 15px;
+		// 	transition: left 0.3s;
+		// 	&::before {
+		// 		content: "";
+		// 		position: fixed;
+		// 		width: 100%;
+		// 		height: 70px;
+		// 		left: -100%;
+		// 		top: 0;
+		// 		transition: left 0.3s;
+		// 		z-index: 2;
+		// 	}
+		// 	[data-fls-menu-open] & {
+		// 		left: 0;
+		// 		&::before {
+		// 			left: 0;
+		// 		}
+		// 	}
+		// }
+	}
+	// .menu__list
+	&__list {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 100%;
+		gap: 4px;
+		margin-right: 10px;
+
+		@media (max-width: toEm($tablet)) {
+			width: 100%;
+			overflow-x: scroll;
+		}
+
+		@media (max-width: toEm($mobileSmall)) {
+			max-width: 345px;
+		}
+	}
+	// .menu__item
+	&__item {
+		@extend %flex-center;
+	}
+	// .menu__link
+	&__link {
+		padding: 16px .75rem;
+		line-height: 100%;
+		height: 100%;
+		text-align: center;
+		user-select: none;
+		white-space: nowrap;
+		position: relative;
+		transform: scale(1);
+		transition: transform .3s ease-in-out;
+		
+		&::after {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 4px;
+			border-radius: 4px 4px 0 0;
+		}
+
+		&--active {
+			font-weight: 600;
+
+			&::after {
+				background: $linkActive;
+			}
+		}
+
+		& .lucky {
+			width: 58px;
+		}
+		& .speed {
+			width: 51px;
+		}
+		& .aviator {
+			width: 60px;
+		}
+		& .jetx {
+			width: 35px;
+		}
+
+		img {
+			max-width: max-content;
+			width: 100%;
+			height: 100%;
+		}
+		
+
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.075);
+			}
+		}
+		
+
+		@media (max-width: toEm($mobile)) {
+		}
+	}
+
+	&__dropdown-btn {
+		padding: 8px 30px 8px 10px;
+		line-height: 100%;
+		background-color: $bgElement;
+		border-radius: 6px;
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '...';
+			top: 50%;
+			right: 10px;
+			transform: translateY(-75%);
+			font-size: 14px;
+			font-weight: 700;
+			color: #d4dbeb;
+			opacity: .7;
+		}
+
+		@media (max-width: toEm(1110)) {
+			display: none;
+		}
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+	// @media (max-width: toEm($mobile)) {
+	// 	display: block;
+	// 	position: relative;
+	// 	width: toRem(30);
+	// 	height: toRem(18);
+	// 	z-index: 5;
+	// 	@media (any-hover: none) {
+	// 		cursor: default;
+	// 	}
+	// 	span,
+	// 	&::before,
+	// 	&::after {
+	// 		content: "";
+	// 		transition: all 0.3s ease 0s;
+	// 		right: 0;
+	// 		position: absolute;
+	// 		width: 100%;
+	// 		height: 2px;
+	// 		background-color: #fff;
+	// 	}
+	// 	&::before {
+	// 		top: 0;
+	// 	}
+	// 	&::after {
+	// 		bottom: 0;
+	// 	}
+	// 	span {
+	// 		top: calc(50% - 1px);
+	// 	}
+	// 	[data-fls-menu-open] & {
+	// 		span {
+	// 			width: 0;
+	// 		}
+	// 		&::before,
+	// 		&::after {
+	// 		}
+	// 		&::before {
+	// 			top: calc(50% - 1px);
+	// 			transform: rotate(-45deg);
+	// 		}
+	// 		&::after {
+	// 			bottom: calc(50% - 1px);
+	// 			transform: rotate(45deg);
+	// 		}
+	// 	}
+	// }
+}

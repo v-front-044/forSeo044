@@ -1,0 +1,59 @@
+<div class="header__menu menu">
+	<nav class="menu__body">
+		<ul class="menu__list">
+			<each loop='item in [
+					{"href": "#","ancor": "Home"},
+					{"href": "#","ancor": "Live"},
+					{"href": "#","ancor": "Sports"},
+					{"href": "#","ancor": "Casino"},
+					{"href": "#","ancor": "Live-games"},
+				]'>
+				<if condition="'[[active]]' === '[[item.ancor]]'">
+					<li class="menu__item">
+						<a href="[[item.href]]" class="menu__link menu__link--active">[[item.ancor]]</a>
+					</li>
+				</if>
+				<else>
+					<li class="menu__item">
+						<a href="[[item.href]]" class="menu__link">[[item.ancor]]</a>
+					</li>
+				</else>
+			</each>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">
+					<img class="lucky" src="@img/menu/lucky-jet.svg" alt="Game link">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">
+					<img class="speed" src="@img/menu/speed-and-cash.svg" alt="Game link">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">
+					<img class="aviator" src="@img/menu/aviator.svg" alt="Game link">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">
+					<img class="jetx" src="@img/menu/jetx.svg" alt="Game link">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">Quick games</a>
+			</li>
+			<li class="menu__item">
+				<a href="/out/1win" class="menu__link">Poker</a>
+			</li>
+		</ul>
+		<a class="menu__dropdown-btn" href="/out/1win">More</a>
+	</nav>
+	<button type="button" data-fls-menu class="menu__icon icon-menu"><span></span></button>
+</div>
+
+
+<!-- <fetch url="@components/layout/menu/menu.json">
+	<each loop='item in response'>
+	</each>
+</fetch> -->
+

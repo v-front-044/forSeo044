@@ -1,0 +1,399 @@
+.wrapper {
+	@media (max-width:toEm($mobile)) {
+		padding-bottom: 60px;
+	}
+}
+
+
+.footer {
+	margin-top: 40px;
+	position: relative;
+
+	&__container {}
+
+	&__logo {
+		@extend %flex-center;
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 80px;
+		height: 22px;
+		background-color: $bgColor;
+		z-index: 1;
+	}
+
+	&__logo-link {
+		width: 48px;
+		height: 22px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__info,
+	&__main,
+	&__payment,
+	&__bottom {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: linear-gradient(90deg, rgba(255, 255, 255, .2) 29.12%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+
+	&__info {
+		padding-top: 50px;
+		padding-bottom: 30px;
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr 1.5fr 2fr;
+		gap: 10px;
+
+		@media (max-width:toEm($tablet)){
+			grid-template-columns: 2fr 1fr 1fr;
+			row-gap: 30px;
+			padding-block: 25px;
+		}
+	}
+
+	&__support {
+		span {
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 14px;
+			margin-bottom: 8px;
+			display: inline-block;
+		}
+
+		p {
+			font-size: 10px;
+			line-height: 14px;
+			letter-spacing: .2px;
+			font-weight: 400;
+			color: $footerTitle;
+		}
+
+		@media (max-width:toEm($tablet)){
+			display: none;
+		}
+	}
+
+	&__contacts {
+		@media (max-width:toEm($mobile)){
+			grid-column: 3 span; 
+		}
+	}
+
+	&__title {
+		color: $footerTitle;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: .4px;
+		line-height: 14px;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+
+	&__table {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	&__list-title {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		li {
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 16px;
+			color: $footerTitle;
+		}
+	}
+
+	&__list-item {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 10px;
+		max-height: 120px;
+	}
+
+	&__list-link {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 16px;
+
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__information {}
+
+	&__categories {}
+
+	&__blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@media (max-width:toEm($tablet)){
+			grid-column: 3 span;
+			flex-direction: row;
+			width: 100%;
+		}
+
+		@media (max-width:toEm($mobileSmall)){
+			flex-wrap: wrap;
+		}
+	}
+
+	&__block {
+		max-width: 175px;
+		width: 100%;
+		height: 42px;
+		display: flex;
+		gap: 10px;
+		border: 1px solid rgba(255, 255, 255, .15);
+		border-radius: 12px;
+		align-items: center;
+		padding: 0 15px;
+		transition: border-color .3s ease-out;
+		align-self: flex-end;
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			right: 16px;
+			width: 10px;
+			height: 10px;
+			background: url('../../../assets/img/icons/info.svg') center/cover no-repeat;
+			transform: translateY(-50%);
+		}
+
+		@media (any-hover: hover){
+			&:hover{
+				border-color: #fff;
+			}
+		}
+
+		@media (max-width:toEm($tablet)) {
+			max-width: 100%;
+		}
+	}
+
+	&__brand {}
+
+	&__brand-descr {
+		display: flex;
+		flex-direction: column;
+
+		& .app {
+			font-size: 8px;
+			line-height: 10px;
+			color: #ffffff80;
+		}
+
+		& .platform {
+			font-weight: 600;
+			font-size: 10px;
+			line-height: 12px;
+			margin-top: 1px;
+		}
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		padding-block: 20px;
+
+		@media (max-width:toEm($tablet)) {
+			flex-direction: column-reverse;
+			width: 100%;
+		}
+	}
+
+	&__social,
+	&__partners,
+	&__buttons {
+		@extend %flex-center;
+		gap: 10px;
+	}
+
+	&__social {}
+
+	&__social-link {}
+
+	&__partners {}
+
+	&__partners-item {}
+
+	&__lang {
+		border-radius: 6px;
+		background-color: $bgElement;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 60px;
+		height: 35px;
+		padding-inline: 7px;
+		position: relative;
+
+		span {
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		img {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+	}
+
+	&__icon {
+		width: 35px;
+		height: 35px;
+		border-radius: 8px;
+		background-color: $bgElement;
+		@extend %flex-center;
+	}
+
+	&__payment {
+		padding-block: 20px;
+	}
+
+	&__payment-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		@media (max-width:toEm($tablet)) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__payment-item {}
+
+	&__bottom {
+		padding-block: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		@media (max-width:toEm($tablet)) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__copyright {
+		color: #8391af;
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 14px;
+		max-width: 700px;
+		width: 100%;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__game-partner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		li:not(:last-child) {
+			@extend %left-strip;
+		}
+
+		li:last-child {
+			color: $footerTitle;
+			font-size: 16px;
+			font-weight: 800;
+			line-height: 16px;
+		}
+	}
+
+	&__game-link {}
+}
+
+
+.menu-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: $bgColor;
+	z-index: 999;
+	border-top: 1px solid #1f2841;
+
+	@media (min-width:toEm($mobile)){
+		display: none;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+		padding: 14px 10px;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			width: 22px;
+			height: 22px;
+		}
+
+		span {
+			margin-top: 5px;
+			display: inline-block;
+			color: #536387;
+			font-size: 9px;
+			font-weight: 500;
+			text-align: center;
+			white-space: nowrap;
+
+			&.active {
+				color: #fff;
+			}
+		}
+	}
+}
