@@ -784,26 +784,17 @@ body {
   height: 100%;
 }
 .hero__block.large {
-  max-width: 100%;
+  max-width: 62.5rem;
+  background: url("../assets/img/bg/main.webp") center/cover no-repeat;
 }
 .hero__block.small {
-  max-width: 100%;
+  max-width: 28.75rem;
 }
-.hero__image {
-  position: absolute;
-  inset: 0;
-  max-width: 62.5rem;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.hero__block.small:nth-child(1) {
+  background: url("../assets/img/bg/secondary-1.webp") center/cover no-repeat;
 }
-.hero__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 16/9;
+.hero__block.small:nth-child(2) {
+  background: url("../assets/img/bg/secondary-2.webp") center/cover no-repeat;
 }
 .hero__wrap {
   height: 100%;
