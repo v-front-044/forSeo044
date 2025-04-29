@@ -34,19 +34,19 @@
 
       &.large {
          max-width: 1000px;
-         background: url('../../../assets/img/bg/main.jpg') center/cover no-repeat;
+         // background: url('../../../assets/img/bg/main.jpg') center/cover no-repeat;
       }
 
       &.small {
          max-width: 460px;
 
-         &:nth-child(1) {
-            background: url('../../../assets/img/bg/secondary-1.jpg') center/cover no-repeat;
-         }
+         // &:nth-child(1) {
+         //    background: url('../../../assets/img/bg/secondary-1.jpg') center/cover no-repeat;
+         // }
 
-         &:nth-child(2) {
-            background: url('../../../assets/img/bg/secondary-2.jpg') center/cover no-repeat;
-         }
+         // &:nth-child(2) {
+         //    background: url('../../../assets/img/bg/secondary-2.jpg') center/cover no-repeat;
+         // }
       }
 
       @media (max-width:toEm($mobile)) {
@@ -55,23 +55,23 @@
       }
    }
 
-   // &__image {
-   //    position: absolute;
-   //    inset: 0;
-   //    max-width: 1000px;
-   //    width: 100%;
-   //    height: 100%;
-   //    z-index: -1;
+   &__image {
+      position: absolute;
+      inset: 0;
+      max-width: 1000px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
 
-   //    img {
-   //       display: block;
-   //       width: 100%;
-   //       height: 100%;
-   //       object-fit: cover;
-   //       object-position: center;
-   //       aspect-ratio: 16 / 9;
-   //    }
-   // }
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+         aspect-ratio: 16 / 9;
+      }
+   }
 
    &__wrap {
       height: 100%;
