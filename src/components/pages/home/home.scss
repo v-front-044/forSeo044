@@ -52,11 +52,13 @@
       left: -2px;
       right: -2px;
       bottom: -2px;
+      max-width: 1000px;
       width: 100%;
       height: 100%;
       z-index: -1;
 
       img {
+         max-width: 1000px;
          width: 104%;
          height: 102%;
          object-fit: cover;
